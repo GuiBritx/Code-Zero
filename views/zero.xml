@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_code_zero_form" model="ir.ui.view">
+            <field name="name">code.zero.form</field>
+            <field name="model">code.zero</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                            <group>
+                                <field name='name'/>
+                                <field name='age'/>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    
+
+    <record id="code_action" model="ir.actions.act_window">
+        <field name="name">Codes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="code_root"
+            name="Code Zero"
+            web_icon="gui_zero,static/description/icon.png"/>
+
+    <menuitem id="code_zero_root"
+            name="Codes"
+            parent="code_root"
+            sequence="10"/>      
+
+    <menuitem id="code_zero"
+            name="Code"
+            parent="code_zero_root"
+            action="code_action"
+            sequence="10"/>
+</odoo>
