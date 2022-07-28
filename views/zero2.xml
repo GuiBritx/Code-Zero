@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_lang_who_c" model="ir.actions.act_window">
+        <field name="name">Linguagem C</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('Linguagem', '=', 'c')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your C field
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_langs_c" 
+              name="Linguagem C"
+              parent="code_zero_root"
+              action="action_lang_who_c"
+              sequence="30"/>
+
+
+
+
+    <record id="action_lang_who_js" model="ir.actions.act_window">
+        <field name="name">Linguagem JS</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('Linguagem', '=', 'javascript')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your JS field
+            </p>
+        </field>
+    </record>
+        
+    <menuitem id="menu_langs_js" 
+              name="Linguagem JS"
+              parent="code_zero_root"
+              action="action_lang_who_js"
+              sequence="40"/>
+
+
+
+    <record id="action_lang_who_python" model="ir.actions.act_window">
+        <field name="name">Linguagem Python</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('Linguagem', '=', 'python')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your Python field
+            </p>
+        </field>
+    </record>
+                
+    <menuitem id="menu_langs_python" 
+              name="Linguagem Python"
+              parent="code_zero_root"
+              action="action_lang_who_python"
+              sequence="50"/>
+
+
+    <record id="action_lang_who_css" model="ir.actions.act_window">
+        <field name="name">Linguagem CSS</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('Linguagem', '=', 'css')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your CSS field
+            </p>
+        </field>
+    </record>
+                        
+    <menuitem id="menu_langs_css" 
+              name="Linguagem CSS"
+              parent="code_zero_root"
+              action="action_lang_who_css"
+              sequence="60"/>
+
+    <record id="action_lang_who_html" model="ir.actions.act_window">
+        <field name="name">Linguagem HTML</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">code.zero</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('Linguagem', '=', 'html')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your HTML field
+            </p>
+        </field>
+    </record>
+                        
+    <menuitem id="menu_langs_html" 
+              name="Linguagem HTML"
+              parent="code_zero_root"
+              action="action_lang_who_html"
+              sequence="70"/>
+</odoo>

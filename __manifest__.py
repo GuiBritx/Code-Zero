@@ -12,6 +12,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/zero.xml',
+        'views/zero2.xml',
     ],
     'demo': [],
     'qweb': [],
