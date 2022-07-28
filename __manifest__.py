@@ -7,9 +7,7 @@
     'category': 'Productivity',
     'website': 'https://github.com/GuiBritx',
     'depends' : [
-        'sale',
-        'mail'
-    
+        'base'
     ],
     'data': [
         'security/ir.model.access.csv',

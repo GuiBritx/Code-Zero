@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="view_code_zero_form" model="ir.ui.view">
-            <field name="name">code.zero.form</field>
-            <field name="model">code.zero</field>
-            <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                            <group>
-                                <field name='name'/>
-                                <field name='age'/>
-                            </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-    
-
+        <field name="name">code.zero.form</field>
+        <field name="model">code.zero</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="Linguagem" />
+                            <field name="Tipo" />
+                        </group>
+                        <group>
+                            <!-- <field name='image_1920' class="oe_avatar" widget="image" options="{'preview_image': 'image_128'}" /> -->
+                            <img alt="imgnone" attrs="{'invisible': [('Linguagem', '!=', False)] }" src="/gui_zero/static/description/icon.png" style="width:120px;height:120px;float:right"/>
+                            <img alt="imgjs" attrs="{'invisible': [('Linguagem', '!=', 'javascript')] }" src="/gui_zero/static/img/js.jpeg" style="width:120px;height:120px;float:right"/>
+                            <img alt="imgcss" attrs="{'invisible': [('Linguagem', '!=', 'css')] }" src="/gui_zero/static/img/css.png" style="width:120px;height:120px;float:right"/>
+                            <img alt="imghtml" attrs="{'invisible': [('Linguagem', '!=', 'html')] }" src="/gui_zero/static/img/html.png" style="width:120px;height:120px;float:right"/>
+                            <img alt="imgpython" attrs="{'invisible': [('Linguagem', '!=', 'python')] }" src="/gui_zero/static/img/python.jpeg" style="width:120px;height:120px;float:right"/>
+                            <img alt="imgc" attrs="{'invisible': [('Linguagem', '!=', 'c')] }" src="/gui_zero/static/img/c.png" style="width:120px;height:120px;float:right" />
+                            <!-- <img alt="imgjs" t-if="record.Linguagem.raw_value === 'JavaScript'" src="/gui_zero/static/img/js.jpeg" /> -->
+                            <!-- <img alt="imgcss" t-if="record.Linguagem.raw_value === 'css'" src="/gui_zero/static/img/css.png" /> -->
+							<!-- <img alt="imghtml" t-if="record.Linguagem.raw_value === 'html'" src="/gui_zero/static/img/html.png" /> -->
+							<!-- <img alt="imgpython" t-if="record.Linguagem.raw_value === 'python'" src="/gui_zero/static/img/python.jpeg" /> -->
+							<!-- <img alt="imgc" t-if="record.Linguagem.raw_value === 'c'" src="/gui_zero/static/img/c.png" /> -->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <record id="code_action" model="ir.actions.act_window">
         <field name="name">Codes</field>
         <field name="type">ir.actions.act_window</field>
@@ -24,24 +38,11 @@
         <field name="view_mode">tree,kanban,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first patient!
-            </p>
+				Create your first patient!
+			</p>
         </field>
     </record>
-
-
-    <menuitem id="code_root"
-            name="Code Zero"
-            web_icon="gui_zero,static/description/icon.png"/>
-
-    <menuitem id="code_zero_root"
-            name="Codes"
-            parent="code_root"
-            sequence="10"/>      
-
-    <menuitem id="code_zero"
-            name="Code"
-            parent="code_zero_root"
-            action="code_action"
-            sequence="10"/>
+    <menuitem id="code_root" name="Code Zero" web_icon="gui_zero,static/description/icon.png" />
+    <menuitem id="code_zero_root" name="Codes" parent="code_root" sequence="10" />
+    <menuitem id="code_zero" name="Code" parent="code_zero_root" action="code_action" sequence="10" />
 </odoo>
